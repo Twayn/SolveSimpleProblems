@@ -19,7 +19,6 @@ public class LongestPalindromeFinder {
 
 
     private static class PalindromeHelper {
-
         int resultStart;
         int resultLength;
 
