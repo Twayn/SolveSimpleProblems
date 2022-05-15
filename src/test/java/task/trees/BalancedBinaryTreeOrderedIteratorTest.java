@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static task.trees.BalancedBinaryTreeOrderedIterator.TreeNode.leaf;
-import static task.trees.BalancedBinaryTreeOrderedIterator.TreeNode.node;
+import static task.trees.TreeNode.leaf;
+import static task.trees.TreeNode.node;
 
 class BalancedBinaryTreeOrderedIteratorTest {
 
