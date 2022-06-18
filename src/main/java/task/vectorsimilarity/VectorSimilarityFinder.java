@@ -42,6 +42,7 @@ public class VectorSimilarityFinder {
 
     private double magnitude(List<Double> values) {
         double sumOfSquares = 0;
+
         for (Double value : values) {
             sumOfSquares += Math.pow(value, 2);
         }
