@@ -3,17 +3,18 @@ package task.findpermutations;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllPermutationsWithoutSymbolDuplicationFinder {
-    List<char[]> findAllPermutations(char[] chars) {
-        if (chars.length == 1) {
-            return List.of(chars);
+public class NoSymbolRepeatsPermutationsOfSpecificLengthFinder {
+    List<char[]> findPermutations(char[] chars, int size) {
+        if (size == 1) {
+            return tryEveryElement(chars);
         }
 
         List<char[]> permutations = new ArrayList<>();
 
         for (int i = 0; i < chars.length; i++) {
-            final List<char[]> subPermutations =
-                findAllPermutations(deleteFromArrayByIndex(i, chars));
+            final char[] withoutCurrentElement = deleteFromArrayByIndex(i, chars);
+
+            final List<char[]> subPermutations = findPermutations(withoutCurrentElement, size - 1);
 
             for (char[] subPermutation : subPermutations) {
                 permutations.add(insertInTheBeginningOfArray(chars[i], subPermutation));
@@ -21,6 +22,16 @@ public class AllPermutationsWithoutSymbolDuplicationFinder {
         }
 
         return permutations;
+    }
+
+    private List<char[]> tryEveryElement(char[] chars) {
+        List<char[]> result = new ArrayList<>();
+
+        for (char aChar : chars) {
+            result.add(new char[]{aChar});
+        }
+
+        return result;
     }
 
     private static char[] insertInTheBeginningOfArray(char toInsert, char[] array) {

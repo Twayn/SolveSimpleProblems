@@ -3,8 +3,13 @@ package task.findpermutations;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PermutationsOfSpecificLengthFinder {
+public class PermutationsFinder {
+    List<char[]> findPermutations(char[] chars) {
+        return findPermutations(chars, chars.length);
+    }
+
     List<char[]> findPermutations(char[] chars, int size) {
+        //TODO do not use new arrays
         if (size == 1) {
             return tryEveryElement(chars);
         }
