@@ -7,8 +7,8 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PermutationsFinderTest {
-    PermutationsFinder finder = new PermutationsFinder();
+class AllPermutationsWithoutSymbolDuplicationFinderSwapTest {
+    AllPermutationsWithoutSymbolDuplicationSwapFinder finder = new AllPermutationsWithoutSymbolDuplicationSwapFinder();
 
     @Test
     void findPermutations() {

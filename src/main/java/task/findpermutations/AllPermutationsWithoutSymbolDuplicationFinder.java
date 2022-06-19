@@ -3,7 +3,7 @@ package task.findpermutations;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PermutationsFinder {
+public class AllPermutationsWithoutSymbolDuplicationFinder {
     List<char[]> findAllPermutations(char[] chars) {
         if (chars.length == 1) {
             return List.of(chars);
