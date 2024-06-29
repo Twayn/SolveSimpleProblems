@@ -8,25 +8,25 @@ class CorrectCapitalsDetectorTest {
     CorrectCapitalsDetector detector = new CorrectCapitalsDetector();
 
     @Test
-    public void testZeroLength(){
+    public void testZeroLength() {
         assertTrue(detector.isCorrectCapitals(""));
     }
 
     @Test
-    public void testSingleCharLength(){
+    public void testSingleCharLength() {
         assertTrue(detector.isCorrectCapitals("a"));
         assertTrue(detector.isCorrectCapitals("A"));
     }
 
     @Test
-    public void testCorrect(){
+    public void testCorrect() {
         assertTrue(detector.isCorrectCapitals("Abc"));
         assertTrue(detector.isCorrectCapitals("abc"));
         assertTrue(detector.isCorrectCapitals("ABC"));
     }
 
     @Test
-    public void testIncorrect(){
+    public void testIncorrect() {
         assertFalse(detector.isCorrectCapitals("aBC"));
         assertFalse(detector.isCorrectCapitals("abC"));
         assertFalse(detector.isCorrectCapitals("ABc"));
